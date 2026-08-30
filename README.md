@@ -23,8 +23,8 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## Features
 
-- **Models** — Enable Veilay; hide or replace Player / Pets / NPC / Enemy models (entities stay)
-- **Native** — hide selected HUD Layout elements; mute battle effects and target lines during duty replay
+- **Models** — Enable Veilay; hide or replace Player / Pets / NPC / Enemy models (entities stay) and hide nameplates
+- **Native** — hide selected HUD Layout elements; mute battle effects, target lines, fly text, and pop-up text during duty replay
 - **Camera** — lock Center / Pos / Angle (avoid using with Cammy FreeCam)
 
 ## Commands

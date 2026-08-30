@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-08-31
+
+### Added
+
+- Enable Veilay also hides the NamePlate addon (live and replay)
+- Native character config can hide fly text and pop-up text during duty replay
+
+### Changed
+
+- Nameplates are hidden with the NamePlate addon instead of RenderFlags; leftover Nameplate flags on models are cleared
+- Native character-config parent switch is labeled Override Native Character Config (Duty Replay only)
+
 ## [0.1.2] - 2026-08-30
 
 ### Changed
@@ -31,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Command `/veilay` to toggle the window
 - Plugin icon and README (en / ja)
 
-[Unreleased]: https://github.com/exatrines/Veilay/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/exatrines/Veilay/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/exatrines/Veilay/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/exatrines/Veilay/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/exatrines/Veilay/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/exatrines/Veilay/releases/tag/v0.1.0

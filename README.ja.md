@@ -25,8 +25,8 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## 機能
 
-- **Models** — Enable Veilay。Player / Pets / NPC / Enemy の非表示またはダミー置換（エンティティは残す）
-- **Native** — HUD Layout の選択非表示、リプレイ中の戦闘エフェクト／ターゲットラインオフ
+- **Models** — Enable Veilay。Player / Pets / NPC / Enemy の非表示またはダミー置換（エンティティは残す）とネームプレート非表示
+- **Native** — HUD Layout の選択非表示、リプレイ中の戦闘エフェクト／ターゲットライン／フライテキスト／ポップアップテキストオフ
 - **Camera** — Center / Pos / Angle の固定（Cammy FreeCam とは併用注意）
 
 

@@ -14,8 +14,8 @@ public sealed class Plugin : IDalamudPlugin
     private readonly VisibilityService _visibility;
     private readonly HudHideService _hudHide;
     private readonly CameraLockService _cameraLock;
-    private readonly BattleEffectService _battleEffects;
-    private readonly TargetLineService _targetLines;
+    private readonly CharacterConfigOverrideService _characterConfig;
+    private readonly NamePlateHideService _namePlates;
     private readonly MarkerOverlayService _markers;
 
     public Plugin(
@@ -50,8 +50,8 @@ public sealed class Plugin : IDalamudPlugin
         _visibility = new VisibilityService();
         _hudHide = new HudHideService();
         _cameraLock = new CameraLockService();
-        _battleEffects = new BattleEffectService();
-        _targetLines = new TargetLineService();
+        _characterConfig = new CharacterConfigOverrideService();
+        _namePlates = new NamePlateHideService();
         _markers = new MarkerOverlayService(_visibility);
         _mainWindow = new MainWindow();
         _windowSystem = new WindowSystem("Veilay");
@@ -87,8 +87,8 @@ public sealed class Plugin : IDalamudPlugin
         _cameraLock.Release();
         _visibility.ReleaseForTransition();
         _hudHide.Restore();
-        _battleEffects.Restore();
-        _targetLines.Restore();
+        _characterConfig.Restore();
+        _namePlates.Restore();
     }
 
     private void OnFrameworkUpdate(IFramework framework)
@@ -96,8 +96,8 @@ public sealed class Plugin : IDalamudPlugin
         _visibility.Update();
         _hudHide.Update();
         _cameraLock.Update();
-        _battleEffects.Update();
-        _targetLines.Update();
+        _characterConfig.Update();
+        _namePlates.Update();
     }
 
     private void DrawUi()
@@ -117,8 +117,8 @@ public sealed class Plugin : IDalamudPlugin
         PluginServices.PluginInterface.UiBuilder.OpenMainUi -= ToggleMain;
 
         _cameraLock.Dispose();
-        _battleEffects.Restore();
-        _targetLines.Restore();
+        _characterConfig.Restore();
+        _namePlates.Restore();
         _visibility.Restore();
         _hudHide.Restore();
         C.Save();

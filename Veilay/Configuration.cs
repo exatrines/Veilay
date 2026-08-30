@@ -80,6 +80,10 @@ public sealed class Configuration : IPluginConfiguration
 
     public bool HideTargetLines { get; set; } = true;
 
+    public bool HideFlyText { get; set; } = true;
+
+    public bool HidePopupText { get; set; } = true;
+
     public HashSet<string> HiddenHudAddons { get; set; } = [];
 
     public bool BattleEffectsOverridden { get; set; }
@@ -93,6 +97,14 @@ public sealed class Configuration : IPluginConfiguration
     public bool TargetLineOverridden { get; set; }
 
     public uint TargetLineBackup { get; set; }
+
+    public bool FlyTextOverridden { get; set; }
+
+    public uint FlyTextBackup { get; set; }
+
+    public bool PopupTextOverridden { get; set; }
+
+    public uint PopupTextBackup { get; set; }
 
     public bool LockCamera { get; set; }
 

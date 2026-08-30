@@ -92,7 +92,7 @@ internal sealed class MainWindow : Window
             "Enable Veilay",
             C.EnableVeilay,
             value => C.EnableVeilay = value,
-            "Hides selected models only. Turns off with HUD checks and Lock Camera when replay begins or ends, and on zone change outside replay. Off keeps Player / Pets / NPC / Enemy and Dummy Size but does not apply them.");
+            "Hides selected models and the NamePlate addon. Turns off with HUD checks and Lock Camera when replay begins or ends, and on zone change outside replay. Off keeps Player / Pets / NPC / Enemy and Dummy Size but does not apply them.");
 
         ImGui.Separator();
 
@@ -177,10 +177,10 @@ internal sealed class MainWindow : Window
     private static void DrawNativeCharacterConfig()
     {
         DrawSavedCheckbox(
-            "Toggle Native Character Config",
+            "Override Native Character Config (Duty Replay only)",
             C.ToggleNativeCharacterConfig,
             value => C.ToggleNativeCharacterConfig = value,
-            "Applies during content replay only. Temporarily changes Character Configuration. Previous values are restored when replay ends.");
+            "Temporarily changes Character Configuration. Previous values are restored when replay ends.");
 
         using (ImRaii.Disabled(!C.ToggleNativeCharacterConfig))
         {
@@ -195,6 +195,16 @@ internal sealed class MainWindow : Window
                 C.HideTargetLines,
                 value => C.HideTargetLines = value,
                 "The arrows when a player or enemy targets someone.");
+            DrawSavedCheckbox(
+                "Hide Fly Text",
+                C.HideFlyText,
+                value => C.HideFlyText = value,
+                "Damage and healing numbers on you and your target.");
+            DrawSavedCheckbox(
+                "Hide Pop-up Text",
+                C.HidePopupText,
+                value => C.HidePopupText = value,
+                "Damage and healing numbers between other characters.");
             ImGui.Unindent();
         }
     }

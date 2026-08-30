@@ -102,7 +102,7 @@ internal sealed unsafe class VisibilityService
         || HidesModel(C.PetMode)
         || HidesModel(C.NpcMode)
         || HidesModel(C.EnemyMode)
-        || (C.ToggleNativeCharacterConfig && (C.HideBattleEffects || C.HideTargetLines))
+        || CharacterConfigOverrideService.WantsApply
         || HidesAnyHud()
         || C.LockCamera;
 
@@ -292,27 +292,25 @@ internal sealed unsafe class VisibilityService
 
         if (hide)
         {
-            if (!native->RenderFlags.HasFlag(HiddenRenderMask))
-                native->RenderFlags |= HiddenRenderMask;
-            return;
-        }
-
-        if ((native->RenderFlags & HiddenRenderMask) != 0)
-            native->RenderFlags &= ~HiddenRenderMask;
-    }
-
-    private static void SetCharacterHidden(GameObject* native, bool hide)
-    {
-        if (hide)
-        {
-            native->RenderFlags |= VisibilityFlags.Nameplate;
-            native->RenderFlags &= ~VisibilityFlags.Model;
-            ((Character*)native)->Alpha = 0f;
+            native->RenderFlags |= VisibilityFlags.Model;
+            native->RenderFlags &= ~VisibilityFlags.Nameplate;
             return;
         }
 
         native->RenderFlags &= ~HiddenRenderMask;
+    }
+
+    private static void SetCharacterHidden(GameObject* native, bool hide)
+    {
+        native->RenderFlags &= ~VisibilityFlags.Model;
+        native->RenderFlags &= ~VisibilityFlags.Nameplate;
         var character = (Character*)native;
+        if (hide)
+        {
+            character->Alpha = 0f;
+            return;
+        }
+
         if (character->Alpha == 0f)
             character->Alpha = 1f;
     }
