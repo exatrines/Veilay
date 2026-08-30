@@ -1,6 +1,6 @@
 using FFXIVClientStructs.FFXIV.Client.Game;
-using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
+using FFXIVClientStructs.FFXIV.Client.Graphics.Scene;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 
@@ -307,14 +307,16 @@ internal sealed unsafe class VisibilityService
         {
             native->RenderFlags |= VisibilityFlags.Nameplate;
             native->RenderFlags &= ~VisibilityFlags.Model;
-            ((Character*)native)->Alpha = 0f;
+            var drawObject = native->DrawObject;
+            if (drawObject != null)
+                drawObject->IsVisible = false;
             return;
         }
 
         native->RenderFlags &= ~HiddenRenderMask;
-        var character = (Character*)native;
-        if (character->Alpha == 0f)
-            character->Alpha = 1f;
+        var draw = native->DrawObject;
+        if (draw != null)
+            draw->IsVisible = true;
     }
 
     private EntityDisplayMode ModeFor(GameObject* native)

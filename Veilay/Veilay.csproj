@@ -4,7 +4,7 @@
 
     <PropertyGroup>
         <Authors>mirage</Authors>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Description>Hide models locally, clear the HUD, and lock the camera for cleaner overlays.</Description>
         <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     </PropertyGroup>

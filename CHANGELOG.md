@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-08-30
+
+### Changed
+
+- Character model hide now uses `DrawObject.IsVisible` instead of Alpha 0, so movement and actions stay usable while models are hidden (nameplates still use RenderFlags)
+
 ## [0.1.0] - 2026-08-29
 
 ### Added
@@ -19,5 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Command `/veilay` to toggle the window
 - Plugin icon and README (en / ja)
 
-[Unreleased]: https://github.com/exatrines/Veilay/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/exatrines/Veilay/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/exatrines/Veilay/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/exatrines/Veilay/releases/tag/v0.1.0
