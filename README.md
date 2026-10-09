@@ -1,8 +1,28 @@
-# Veilay
+<p align="center">
+  <img src="Veilay/Data/plugin-icon.png" alt="Veilay icon" width="128" height="128">
+</p>
 
-[日本語](README.ja.md)
+<h1 align="center">Veilay</h1>
 
-![Hidden models with Splatoon overlays on the arena](docs/screenshots/veilay-overlay-730x380.png)
+<p align="center">
+  English | <a href="docs/README.ja.md">日本語</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/exatrines/Veilay/releases/latest">
+    <img src="https://img.shields.io/github/v/release/exatrines/Veilay?label=Release&amp;labelColor=F280B6&amp;color=FFFFFF&amp;style=flat&amp;sort=date&amp;display_name=tag" alt="Release">
+  </a>
+  <a href="CHANGELOG.md">
+    <img src="https://img.shields.io/badge/Changelog-view-FFFFFF?labelColor=F280B6&amp;style=flat" alt="Changelog">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL--3.0--or--later-FFFFFF?labelColor=F280B6&amp;style=flat" alt="AGPL-3.0-or-later">
+  </a>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/veilay-overlay-730x380.png" alt="Hidden models with Splatoon overlays on the arena">
+</p>
 
 Veilay is a Dalamud plugin that hides character models locally, clears selected HUD elements, and can lock the camera. It is mainly for sharing drawing-plugin workflows such as Splatoon while character model visuals stay hidden.
 
@@ -39,6 +59,6 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 2. Point Dalamud’s **dev plugin** path at `Veilay/bin/Release/`
 3. Enable **Veilay** in the plugin installer (dev)
 
-## License
+## Contributing
 
-[AGPL-3.0-or-later](LICENSE)
+Contributions are always welcome! Please see the [contribution guide](CONTRIBUTING.md).

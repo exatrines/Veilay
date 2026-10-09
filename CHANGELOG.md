@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Added `CONTRIBUTING.md`, synced from the shared exatrines contribution guide
+
+### Changed
+
+- Reorganized the README: centered plugin icon and Release / Changelog / License badges, a Contributing section, and the Japanese README moved to `docs/README.ja.md`
+- Restored `LICENSE` to the official GNU AGPL v3 text
+
 ## [0.1.3] - 2026-08-31
 
 ### Added
